@@ -1,0 +1,210 @@
+:root {
+    --primary-light: hsl(228, 84%, 35%);
+    --primary-dark: #ff002b;
+    --accent: #903b57;
+    --danger: #9c9595;
+    --success: #2b14af;
+    --success2: #00d9ff;
+    --success3: #ff0101;
+    --success4: #ff9501;
+    --text-muted: #5d3d3d;
+}
+
+/* Custom Navbar */
+.navbar-dark.bg-primary {
+    background: linear-gradient(45deg, var(--primary-light), var(--primary-dark)) !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Navbar Brand - Two Line Version */
+.navbar-brand {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+    padding: 0.5rem 0;
+}
+
+.brand-main {
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+
+.brand-version {
+    font-size: 0.9rem;
+    line-height: 1.1;
+}
+
+.navbar-brand strong {
+    font-weight: 700;
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+    
+    .brand-main {
+        font-size: 1.5rem;
+    }
+    
+    .brand-version {
+        font-size: 1rem;
+    }
+}
+
+.nav-link {
+    font-weight: 500;
+    position: relative;
+    margin: 0 15px;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--accent);
+}
+
+/* Navbar padding adjustment */
+@media (max-width: 767.98px) {
+    .navbar {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+}
+
+/* Navbar toggler alignment */
+.navbar-toggler {
+    margin-left: auto;
+    border: none;
+    padding: 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    transform: translateY(-8px);
+}
+
+.navbar-toggler-icon::after {
+    transform: translateY(8px);
+}
+
+/* Animasi saat aktif */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-color: transparent;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::before {
+    transform: rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon::after {
+    transform: rotate(-45deg);
+}
+
+/* Custom Switch  */
+/* switch 1 */
+.form-switch .form-check-input {
+    width: 3.8em;
+    height: 2em;
+    margin-right: 20px;
+    background-color: var(--danger);
+    /* Saat mati */
+    border-color: var(--danger);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: var(--success);
+    /* Saat nyala (Magenta terang) */
+    border-color: var(--success);
+}
+
+.form-switch .form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(198, 66, 110, 0.5);
+}
+
+.form-switch .form-check-input::before {
+    height: 1.6em;
+    width: 1.6em;
+    top: 0.2em;
+    left: 0.2em;
+    background-color: white;
+}
+/* toggle switch warna */
+/* Switch 2 */
+.switch-2.form-check-input:checked {
+    background-color: var(--success2) !important;
+    border-color: var(--success2) !important;
+}
+
+/* Switch 3 */
+.switch-3.form-check-input:checked {
+    background-color: var(--success3) !important;
+    border-color: var(--success3) !important;
+}
+
+/* Switch 4 */
+.switch-4.form-check-input:checked {
+    background-color: var(--success4) !important;
+    border-color: var(--success4) !important;
+}
+
+/* Lampu Icon */
+.lampu-icon {
+    font-size: 2.2rem;
+    transition: all 0.3s ease;
+}
+/* togle JS  */
+.icon-active {
+    color: var(--success);
+    filter: drop-shadow(0 0 8px rgba(87, 15, 255, 0.4));
+}
+.icon-active2 {
+    color: var(--success2);
+    filter: drop-shadow(0 0 8px rgba(87, 15, 255, 0.4));
+}
+.icon-active3 {
+    color: var(--success3);
+    filter: drop-shadow(0 0 8px rgba(87, 15, 255, 0.4));
+}
+.icon-active4 {
+    color: var(--success4);
+    filter: drop-shadow(0 0 8px rgba(87, 15, 255, 0.4));
+}
+.icon-inactive {
+    color: var(--text-muted);
+    opacity: 0.7;
+}
