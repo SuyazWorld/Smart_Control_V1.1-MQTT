@@ -31,6 +31,3 @@ Control 4 relay channels in real-time over WiFi using the lightweight MQTT proto
 link: https://www.instagram.com/p/DJq511tyfll/?utm_source=ig_web_copy_link  
 
 <br />
-
-----
-<div align="center">Generated using <a href="https://profilinator.rishav.dev/" target="_blank">Github Profilinator</a></div>
